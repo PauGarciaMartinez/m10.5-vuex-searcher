@@ -1,3 +1,5 @@
+import Movies from "./../components/Movies.vue"
+
 export default {
   name: "Searcher",
   data() {
@@ -13,5 +15,8 @@ export default {
   },
   computed: {
 
+  },
+  components: {
+    Movies
   }
 }

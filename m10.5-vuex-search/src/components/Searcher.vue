@@ -1,5 +1,6 @@
 <!-- TEMPLATE -->
 <template>
+
   <h1>{{ title }}</h1>
   
   <input 
@@ -19,6 +20,12 @@
         id="unavailable" 
         name="unavailable"
         class="radio-btn">
+  </div>
+
+  <div class="movies-wrapper">
+    <Movies/>
+    <Movies/>
+    <Movies/>
   </div>
 
 </template>

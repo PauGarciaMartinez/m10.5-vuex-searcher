@@ -1,0 +1,18 @@
+/* MOVIES CARDS */
+
+.movie-container {
+  background-color: #2c3e5042;
+  box-shadow: 2px 2px 5px #2c3e508c;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.movie-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.movie-description {
+  padding: 1rem;
+}

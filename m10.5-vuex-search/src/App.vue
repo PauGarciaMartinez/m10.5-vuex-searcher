@@ -8,13 +8,11 @@
 <!-- SCRIPT -->
 <script>
 import Searcher from "./components/Searcher.vue"
-import Movies from "./components/Movies.vue"
 
 export default {
   name: 'App',
   components: {
-    Searcher,
-    Movies
+    Searcher
   }
 }
 </script>

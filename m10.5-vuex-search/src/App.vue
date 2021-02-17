@@ -1,16 +1,25 @@
+<!-- TEMPLATE -->
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <Searcher>
+  </Searcher>
 </template>
 
+
+<!-- SCRIPT -->
 <script>
+import Searcher from "./components/Searcher.vue"
+import Movies from "./components/Movies.vue"
 
 export default {
   name: 'App',
   components: {
+    Searcher,
+    Movies
   }
 }
 </script>
 
+<!-- STYLE -->
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

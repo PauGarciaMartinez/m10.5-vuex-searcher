@@ -1,4 +1,4 @@
-# m10.5-vuex-searcher
+# m10.5-vuex-search
 
 ## Project setup
 ```

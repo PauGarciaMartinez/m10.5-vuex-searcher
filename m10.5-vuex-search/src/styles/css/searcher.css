@@ -1,0 +1,42 @@
+/* HEADER */
+
+h1 {
+  font-size: 3rem;
+}
+
+/* SEARCH BAR */
+
+.search-bar {
+  width: 90%;
+  height: 1.2rem;
+  border: 2px solid #2c3e509f;
+  border-radius: 0.5rem;
+  outline: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* RADIO BUTTONS */
+
+.radio-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+  margin-left: 1.5rem;
+}
+
+.radio-btn {
+  transform: scale(1.5);
+  margin-top: 0;
+}
+
+.radio-btn:hover {
+  cursor: pointer;
+}

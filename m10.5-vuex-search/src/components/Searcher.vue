@@ -4,19 +4,21 @@
   
   <input 
     type="text" 
-    :placeholder="placeholder">
-  
-  <div>
-    <label for="available"></label>
+    :placeholder="placeholder"
+    class="search-bar">
+  <div class="radio-container">
+    <label for="available">{{ available }}</label>
       <input 
         type="radio" 
         id="available" 
-        name="available">
-    <label for="unavailable"></label>
+        name="available"
+        class="radio-btn">
+    <label for="unavailable">{{ unavailable }}</label>
       <input 
         type="radio" 
         id="unavailable" 
-        name="unavailable">
+        name="unavailable"
+        class="radio-btn">
   </div>
 
 </template>

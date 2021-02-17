@@ -2,11 +2,15 @@
 <template>
 
   <h1>{{ title }}</h1>
-  
-  <input 
-    type="text" 
-    :placeholder="placeholder"
-    class="search-bar">
+
+  <div class="search-container">
+    <input 
+      type="text" 
+      :placeholder="placeholder"
+      class="search-bar"> 
+  </div>
+
+
   <div class="radio-container">
     <label for="available">{{ available }}</label>
       <input 

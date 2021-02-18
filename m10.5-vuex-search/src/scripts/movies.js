@@ -10,6 +10,8 @@ export default {
 
   },
   computed: {
-
+    movies() {
+      return this.$store.state.movies
+    }
   }
 }

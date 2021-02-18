@@ -1,9 +1,10 @@
 <!-- TEMPLATE -->
 <template>
-  <div class="movie-container">
-    <p class="movie-title">Random movie</p>
-    <small>Sunt, autem!</small>
-    <p class="movie-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, id.</p> 
+  
+  <div class="movie-container" v-for="movie in movies" :key="movie">
+    <p class="movie-title">{{ movie.title }}</p>
+    <small>Available: {{ movie.available }}</small>
+    <p class="movie-description">{{ movie.description }}</p> 
   </div>
 </template>
 

@@ -5,11 +5,11 @@
 
   <div class="search-container">
     <input 
-      type="text" 
+      type="text"
+      v-model="input" 
       :placeholder="placeholder"
       class="search-bar"> 
   </div>
-
 
   <div class="radio-container">
     <label for="available">{{ available }}</label>
@@ -27,9 +27,7 @@
   </div>
 
   <div class="movies-wrapper">
-    <Movies/>
-    <Movies/>
-    <Movies/>
+    <Movies :inputSearch="input" />
   </div>
 
 </template>

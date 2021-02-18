@@ -5,6 +5,11 @@ export default createStore({
   state: {
     movies: Movies
   },
+  getters: {
+    filterMovies: (state) => (input) => {
+      return state.movies.filter(movie => movie.title.toLowerCase().includes(input.toLowerCase()))
+    }
+  },
   mutations: {
   },
   actions: {

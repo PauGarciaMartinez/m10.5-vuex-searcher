@@ -17,18 +17,28 @@
         type="radio" 
         id="available" 
         name="available"
-        class="radio-btn">
+        class="radio-btn"
+        :checked="check1"
+        @click="toggleCheck1">
     <label for="unavailable">{{ unavailable }}</label>
       <input 
         type="radio" 
         id="unavailable" 
         name="unavailable"
-        class="radio-btn">
+        class="radio-btn"
+        :checked="check2"
+        @click="toggleCheck2">
   </div>
 
   <div class="movies-wrapper">
-    <Movies :inputSearch="input" />
+    <Movies 
+      :inputSearch="input" 
+      :check="check1" />
   </div>
+
+  <!-- <div class="no-movies-container">
+    <p>{{ msg }}</p>
+  </div> -->
 
 </template>
 

@@ -8,11 +8,21 @@ export default {
       placeholder: "Choose a movie to see if it's available",
       available: "Available",
       unavailable: "Unavailable",
-      input: ""
+      input: "",
+      check1: true,
+      check2: false,
+      msg: "No movies available"
     }
   },
   methods: {
-
+    toggleCheck1() {
+      this.check1 = !this.check1
+      this.check2 ? this.check2 = !this.check2 : this.check2
+    },
+    toggleCheck2() {
+      this.check2 = !this.check2
+      this.check1 ? this.check1 = !this.check1 : this.check1
+    }
   },
   computed: {
 

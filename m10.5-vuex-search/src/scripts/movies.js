@@ -1,6 +1,6 @@
 export default {
   name: "Movies",
-  props: ["inputSearch"],
+  props: ["inputSearch", "check"],
   data() {
     return {
       
@@ -16,6 +16,9 @@ export default {
     },
     filterMovies() {
       return this.$store.getters.filterMovies(this.inputSearch)
+    },
+    filterAvailableMovies() {
+      return this.$store.getters.filterAvailableMovies(true, this.check)
     }
   }
 }

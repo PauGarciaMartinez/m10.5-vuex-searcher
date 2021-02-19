@@ -8,7 +8,7 @@ export default createStore({
   getters: {
     filterMovies: (state) => (input, available, check) => {
       const movieList = state.movies.filter(movie => movie.title.toLowerCase().includes(input.toLowerCase()))
-      if (check && input.length >= 3) {
+      if (check) {
         return movieList.filter(movie => movie.available === available)
       } else if (!check) {
         return movieList.filter(movie => movie.available !== available)

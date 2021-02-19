@@ -16,11 +16,11 @@ export default {
   },
   methods: {
     toggleCheck1() {
-      this.check1 = !this.check1
+      this.check2 ? this.check1 = !this.check1 : this.check1
       this.check2 ? this.check2 = !this.check2 : this.check2
     },
     toggleCheck2() {
-      this.check2 = !this.check2
+      this.check1 ? this.check2 = !this.check2 : this.check2
       this.check1 ? this.check1 = !this.check1 : this.check1
     }
   },

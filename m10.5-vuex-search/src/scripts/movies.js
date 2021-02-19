@@ -15,10 +15,7 @@ export default {
       return this.$store.state.movies
     },
     filterMovies() {
-      return this.$store.getters.filterMovies(this.inputSearch)
-    },
-    filterAvailableMovies() {
-      return this.$store.getters.filterAvailableMovies(true, this.check)
+      return this.$store.getters.filterMovies(this.inputSearch, true, this.check)
     }
   }
 }

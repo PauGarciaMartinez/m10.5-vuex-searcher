@@ -25,7 +25,9 @@ export default {
     }
   },
   computed: {
-
+    checkEmpty() {
+      return this.$store.getters.checkEmpty
+    }
   },
   components: {
     Movies

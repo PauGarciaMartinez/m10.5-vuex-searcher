@@ -3,7 +3,8 @@ import Movies from './../assets/mock-data.json'
 
 export default createStore({
   state: {
-    movies: Movies
+    movies: Movies,
+    empty: false
   },
   getters: {
     filterMovies: (state) => (input, available, check) => {
@@ -17,11 +18,26 @@ export default createStore({
       } else {
         const movieList = state.movies.filter(movie => movie.title.toLowerCase().includes(input.toLowerCase()))
         if (check) {
-          return movieList.filter(movie => movie.available === available)
+          const availableMovies = movieList.filter(movie => movie.available === available)
+          if (availableMovies.length !== 0) {
+            state.empty = false
+            return availableMovies
+          } else {
+            state.empty = true
+          }
         } else if (!check) {
-          return movieList.filter(movie => movie.available !== available)
+          const unavailableMovies = movieList.filter(movie => movie.available !== available)
+          if (unavailableMovies.length !== 0) {
+            state.empty = false
+            return unavailableMovies
+          } else {
+            state.empty = true
+          }
         }
       }
+    },
+    checkEmpty: (state) => {
+      return state.empty
     }
   },
   mutations: {

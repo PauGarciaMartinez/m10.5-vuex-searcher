@@ -1,7 +1,10 @@
 <!-- TEMPLATE -->
 <template>
-  <transition-group name="list">
-    <div class="movie-container" v-for="movie in filterMovies" :key="movie">
+  <transition-group  
+    appear 
+    @before-enter="beforeEnter"
+    @enter="enter">
+    <div class="movie-container" v-for="(movie, index) in filterMovies" :key="movie" :data-index="index">
       <p class="movie-title">{{ movie.title }}</p>
       <small>Available: {{ movie.available }}</small>
       <p class="movie-description">{{ movie.description }}</p> 

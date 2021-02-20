@@ -36,9 +36,11 @@
       :check="check1" />
   </div>
 
-  <div v-show="checkEmpty" class="no-movies-container">
-    <p>{{ msg }}</p>
-  </div>
+  <transition name="no-movies">
+    <div v-if="checkEmpty" class="no-movies-container">
+      <p>{{ msg }}</p>
+    </div>
+  </transition>
 
 </template>
 

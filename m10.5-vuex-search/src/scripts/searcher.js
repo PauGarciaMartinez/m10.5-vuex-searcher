@@ -27,8 +27,8 @@ export default {
       get() {
         return this.$store.state.filter.availableT
       },
-      set(value) {
-        this.$store.commit("setAvailable", value)
+      set() {
+        this.$store.commit("setAvailable")
       }
     }
   },

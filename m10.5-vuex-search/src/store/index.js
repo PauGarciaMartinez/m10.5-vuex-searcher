@@ -7,7 +7,8 @@ export default createStore({
     empty: false,
     filter: {
       input: "",
-      availableT: true
+      availableT: true,
+      check: true
     }
   },
   getters: {
@@ -15,14 +16,14 @@ export default createStore({
       if (state.filter.input.length < 3) {
         state.empty = false
         const allMovies = state.movies
-        if (state.filter.availableT) {
+        if (state.filter.check) {
           return allMovies.filter(movie => movie.available === state.filter.availableT)
-        } else if (!state.filter.availableT) {
+        } else if (!state.filter.check) {
           return allMovies.filter(movie => movie.available !== state.filter.availableT)
         }
       } else {
         const movieList = state.movies.filter(movie => movie.title.toLowerCase().includes(state.filter.input.toLowerCase()))
-        if (state.filter.availableT) {
+        if (state.filter.check) {
           const availableMovies = movieList.filter(movie => movie.available === state.filter.availableT)
           if (availableMovies.length !== 0) {
             state.empty = false
@@ -30,7 +31,7 @@ export default createStore({
           } else {
             state.empty = true
           }
-        } else if (!state.filter.availableT) {
+        } else if (!state.filter.check) {
           const unavailableMovies = movieList.filter(movie => movie.available !== state.filter.availableT)
           if (unavailableMovies.length !== 0) {
             state.empty = false

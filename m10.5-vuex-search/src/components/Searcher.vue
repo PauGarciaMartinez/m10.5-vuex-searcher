@@ -12,22 +12,6 @@
   </div>
 
   <div class="radio-container">
-<!--     <label for="available">{{ available }}</label>
-      <input 
-        type="radio" 
-        id="available" 
-        name="available"
-        class="radio-btn"
-        :checked="check1"
-        @click="toggleCheck1">
-    <label for="unavailable">{{ unavailable }}</label>
-      <input 
-        type="radio" 
-        id="unavailable" 
-        name="unavailable"
-        class="radio-btn"
-        :checked="check2"
-        @click="toggleCheck1"> -->
     <label for="available">{{ availableMsg }}</label>
       <input 
         type="radio" 

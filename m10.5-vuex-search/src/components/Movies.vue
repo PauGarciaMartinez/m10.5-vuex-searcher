@@ -1,5 +1,6 @@
 <!-- TEMPLATE -->
 <template>
+
   <transition-group  
     appear 
     @before-enter="beforeEnter"
@@ -11,6 +12,9 @@
     </div>
   </transition-group>
   
+<!--   <movieItem :movie="movie" v-for="(movie, index) in filterMovies" :key="movie" :data-index="index">
+
+ -->
 </template>
 
 <!-- SCRIPT -->

@@ -6,27 +6,30 @@ export default {
     return {
       title: "Search for a movie",
       placeholder: "Choose a movie to see if it's available",
-      available: "Available",
+      availableMsg: "Available",
       unavailable: "Unavailable",
-      input: "",
-      check1: true,
-      check2: false,
       msg: "No movies available"
-    }
-  },
-  methods: {
-    toggleCheck1() {
-      this.check2 ? this.check1 = !this.check1 : this.check1
-      this.check2 ? this.check2 = !this.check2 : this.check2
-    },
-    toggleCheck2() {
-      this.check1 ? this.check2 = !this.check2 : this.check2
-      this.check1 ? this.check1 = !this.check1 : this.check1
     }
   },
   computed: {
     checkEmpty() {
       return this.$store.getters.checkEmpty
+    },
+    inputSearch: {
+      get() {
+        return this.$store.state.filter.input
+      },
+      set(search) {
+        this.$store.commit("setSearch", search)
+      }
+    },
+    availableT: {
+      get() {
+        return this.$store.state.filter.availableT
+      },
+      set(value) {
+        this.$store.commit("setAvailable", value)
+      }
     }
   },
   components: {

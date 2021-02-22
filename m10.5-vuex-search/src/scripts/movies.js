@@ -2,7 +2,12 @@ import gsap from "gsap"
 
 export default {
   name: "Movies",
-  props: ["inputSearch", "check"],
+  props: {
+/*     movie: { 
+      type: Object, required: true
+    } */
+  },
+  /* ["inputSearch", "check"], */
   setup() {
     const beforeEnter = (el) => {
       el.style.opacity = 0;
@@ -21,7 +26,7 @@ export default {
   },
   computed: {
     filterMovies() {
-      return this.$store.getters.filterMovies(this.inputSearch, true, this.check)
+      return this.$store.getters.filterMovies
     }
   }
 }

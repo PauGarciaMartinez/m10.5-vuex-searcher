@@ -1,4 +1,4 @@
-import Movies from "./../components/Movies.vue"
+import MovieList from "./../components/MovieList.vue"
 
 export default {
   name: "Searcher",
@@ -33,6 +33,6 @@ export default {
     }
   },
   components: {
-    Movies
+    MovieList
   }
 }

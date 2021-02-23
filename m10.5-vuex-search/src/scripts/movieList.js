@@ -1,13 +1,8 @@
+import MovieItem from "./../components/MovieItem.vue"
 import gsap from "gsap"
 
 export default {
-  name: "Movies",
-  props: {
-/*     movie: { 
-      type: Object, required: true
-    } */
-  },
-  /* ["inputSearch", "check"], */
+  name: "MovieList",
   setup() {
     const beforeEnter = (el) => {
       el.style.opacity = 0;
@@ -28,5 +23,8 @@ export default {
     filterMovies() {
       return this.$store.getters.filterMovies
     }
+  },
+  components: {
+    MovieItem
   }
 }

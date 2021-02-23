@@ -30,10 +30,8 @@
         :value="false">
   </div>
 
-  <div class="movies-wrapper">
-    <Movies/>
-  </div>
-
+  <MovieList/>
+  
   <transition name="no-movies">
     <div v-if="checkEmpty" class="no-movies-container">
       <p>{{ msg }}</p>

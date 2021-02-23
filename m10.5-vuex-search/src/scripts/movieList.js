@@ -1,5 +1,6 @@
 import MovieItem from "./../components/MovieItem.vue"
 import gsap from "gsap"
+import { mapGetters } from "vuex";
 
 export default {
   name: "MovieList",
@@ -20,9 +21,9 @@ export default {
     return { beforeEnter, enter }
   },
   computed: {
-    filterMovies() {
-      return this.$store.getters.filterMovies
-    }
+    ...mapGetters([
+      'filterMovies'
+    ])
   },
   components: {
     MovieItem

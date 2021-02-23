@@ -1,4 +1,5 @@
 import MovieList from "./../components/MovieList.vue"
+import { mapGetters } from "vuex"
 
 export default {
   name: "Searcher",
@@ -12,9 +13,9 @@ export default {
     }
   },
   computed: {
-    checkEmpty() {
-      return this.$store.getters.checkEmpty
-    },
+    ...mapGetters([
+      'checkEmpty'
+    ]),
     inputSearch: {
       get() {
         return this.$store.state.filter.input
